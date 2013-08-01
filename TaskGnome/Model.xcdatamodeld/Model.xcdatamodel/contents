@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CdCategory" representedClassName="CdCategory" syncable="YES">
+        <attribute name="cat_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="md5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="cat_id"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <entity name="CdDeletedTask" representedClassName="CdDeletedTask" syncable="YES">
+        <attribute name="task_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CdTask" representedClassName="CdTask" syncable="YES">
+        <attribute name="due" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="kind" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="md5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="more_info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="task_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="task_section" optional="YES" transient="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cat_relation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CdCategory" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="due"/>
+                <index value="priority"/>
+                <index value="name"/>
+            </compoundIndex>
+            <compoundIndex>
+                <index value="task_id"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <elements>
+        <element name="CdCategory" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="CdDeletedTask" positionX="160" positionY="342" width="128" height="60"/>
+        <element name="CdTask" positionX="583" positionY="189" width="128" height="195"/>
+    </elements>
+</model>

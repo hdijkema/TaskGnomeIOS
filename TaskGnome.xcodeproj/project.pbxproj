@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE5A319A179EC5E2001DEFAF /* AboutDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A3199179EC5E2001DEFAF /* AboutDialog.m */; };
+		CE5A31A0179EC65A001DEFAF /* AboutPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A319F179EC659001DEFAF /* AboutPanel.m */; };
+		CE5A31A3179ECBE1001DEFAF /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A31A1179ECBE1001DEFAF /* about.png */; };
+		CE5A31A4179ECBE1001DEFAF /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A31A2179ECBE1001DEFAF /* about@2x.png */; };
+		CE794635179F94B3001373E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794634179F94B3001373E2 /* SystemConfiguration.framework */; };
+		CE794637179F94F0001373E2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE794636179F94F0001373E2 /* MobileCoreServices.framework */; };
+		CE7FAE75179DDE4B00C5B33E /* ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE74179DDE4B00C5B33E /* ServerCommunication.m */; };
+		CE7FAE78179DDE6A00C5B33E /* AddTaskDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE77179DDE6A00C5B33E /* AddTaskDialog.m */; };
+		CE7FAE7F179DDEB300C5B33E /* UserAccountDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE7E179DDEB300C5B33E /* UserAccountDialog.m */; };
+		CE7FAE85179DDEE400C5B33E /* TaskSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE82179DDEE400C5B33E /* TaskSelector.m */; };
+		CE7FAE86179DDEE400C5B33E /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE84179DDEE400C5B33E /* TasksViewController.m */; };
+		CE7FAE8D179DDEFD00C5B33E /* TextFieldInput.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE88179DDEFD00C5B33E /* TextFieldInput.m */; };
+		CE7FAE8E179DDEFD00C5B33E /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE8A179DDEFD00C5B33E /* TextViewCell.m */; };
+		CE7FAE8F179DDEFD00C5B33E /* UserAccountPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE8C179DDEFD00C5B33E /* UserAccountPanel.m */; };
+		CE7FAE92179DDF2200C5B33E /* TaskTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE91179DDF2200C5B33E /* TaskTableCell.m */; };
+		CE7FAE95179DDF5000C5B33E /* SwitchCellNoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE94179DDF5000C5B33E /* SwitchCellNoLayout.m */; };
+		CE7FAE98179DDF6800C5B33E /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE97179DDF6800C5B33E /* SwitchCell.m */; };
+		CE7FAEA0179DDF9300C5B33E /* ChooseCategoryDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE9B179DDF9300C5B33E /* ChooseCategoryDialog.m */; };
+		CE7FAEA1179DDF9300C5B33E /* ChooseDateDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE9D179DDF9300C5B33E /* ChooseDateDialog.m */; };
+		CE7FAEA2179DDF9300C5B33E /* ChoosePriorityDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAE9F179DDF9300C5B33E /* ChoosePriorityDialog.m */; };
+		CE7FAEA5179DDFAC00C5B33E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEA3179DDFAC00C5B33E /* Model.xcdatamodeld */; };
+		CE7FAEB1179DE0E500C5B33E /* CdCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEB0179DE0E500C5B33E /* CdCategory.m */; };
+		CE7FAEB4179DE0E600C5B33E /* CdTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEB3179DE0E600C5B33E /* CdTask.m */; };
+		CE7FAEB7179DE0E600C5B33E /* CdDeletedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEB6179DE0E600C5B33E /* CdDeletedTask.m */; };
+		CE7FAEBA179DE21F00C5B33E /* Md5.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEB9179DE21F00C5B33E /* Md5.m */; };
+		CE7FAEBE179DE24000C5B33E /* UserPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEBC179DE24000C5B33E /* UserPrefs.m */; };
+		CE7FAEC4179DE31600C5B33E /* LabelDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEC3179DE31600C5B33E /* LabelDialog.m */; };
+		CE7FAEC7179DE34500C5B33E /* TasksNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FAEC6179DE34500C5B33E /* TasksNavigationViewController.m */; };
+		CE7FAEC9179DE37F00C5B33E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7FAEC8179DE37F00C5B33E /* CoreData.framework */; };
+		CE7FAECB179DE38A00C5B33E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7FAECA179DE38A00C5B33E /* Security.framework */; };
+		CE7FAEFE179DE4A900C5B33E /* Done.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEEE179DE4A900C5B33E /* Done.png */; };
+		CE7FAEFF179DE4A900C5B33E /* Done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEEF179DE4A900C5B33E /* Done@2x.png */; };
+		CE7FAF00179DE4A900C5B33E /* Preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF0179DE4A900C5B33E /* Preferences.png */; };
+		CE7FAF01179DE4A900C5B33E /* Preferences@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF1179DE4A900C5B33E /* Preferences@2x.png */; };
+		CE7FAF02179DE4A900C5B33E /* TaskGnomAddIcon2_48.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF2179DE4A900C5B33E /* TaskGnomAddIcon2_48.png */; };
+		CE7FAF03179DE4A900C5B33E /* TaskGnomAddIcon30.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF3179DE4A900C5B33E /* TaskGnomAddIcon30.png */; };
+		CE7FAF04179DE4A900C5B33E /* TaskGnomAddIcon64.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF4179DE4A900C5B33E /* TaskGnomAddIcon64.png */; };
+		CE7FAF05179DE4A900C5B33E /* TaskGnomeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF5179DE4A900C5B33E /* TaskGnomeLogo.png */; };
+		CE7FAF06179DE4A900C5B33E /* TaskGnomeLogo114.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF6179DE4A900C5B33E /* TaskGnomeLogo114.png */; };
+		CE7FAF07179DE4A900C5B33E /* TaskGnomeLogo144.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF7179DE4A900C5B33E /* TaskGnomeLogo144.png */; };
+		CE7FAF08179DE4A900C5B33E /* TaskGnomeLogo256.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF8179DE4A900C5B33E /* TaskGnomeLogo256.png */; };
+		CE7FAF09179DE4A900C5B33E /* TaskGnomeLogo512.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEF9179DE4A900C5B33E /* TaskGnomeLogo512.png */; };
+		CE7FAF0A179DE4A900C5B33E /* TaskGnomeLogo57.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEFA179DE4A900C5B33E /* TaskGnomeLogo57.png */; };
+		CE7FAF0B179DE4A900C5B33E /* TaskGnomeLogo72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEFB179DE4A900C5B33E /* TaskGnomeLogo72.png */; };
+		CE7FAF0C179DE4A900C5B33E /* Tasks.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEFC179DE4A900C5B33E /* Tasks.png */; };
+		CE7FAF0D179DE4A900C5B33E /* Tasks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAEFD179DE4A900C5B33E /* Tasks@2x.png */; };
+		CE7FAF0F179DE4F700C5B33E /* TaskGnomeLogo57.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF0E179DE4F700C5B33E /* TaskGnomeLogo57.png */; };
+		CE7FAF11179DE52000C5B33E /* TaskGnomeLogo114.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF10179DE52000C5B33E /* TaskGnomeLogo114.png */; };
+		CE7FAF13179DE53400C5B33E /* TaskGnomeLogo72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF12179DE53400C5B33E /* TaskGnomeLogo72.png */; };
+		CE7FAF15179DE53C00C5B33E /* TaskGnomeLogo144.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7FAF14179DE53B00C5B33E /* TaskGnomeLogo144.png */; };
+		CEDC4748179DDCB900746119 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC4747179DDCB900746119 /* UIKit.framework */; };
+		CEDC474A179DDCB900746119 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC4749179DDCB900746119 /* Foundation.framework */; };
+		CEDC474C179DDCB900746119 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC474B179DDCB900746119 /* CoreGraphics.framework */; };
+		CEDC4752179DDCBA00746119 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEDC4750179DDCBA00746119 /* InfoPlist.strings */; };
+		CEDC4754179DDCBA00746119 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4753179DDCBA00746119 /* main.m */; };
+		CEDC4758179DDCBA00746119 /* TaskGnomeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4757179DDCBA00746119 /* TaskGnomeAppDelegate.m */; };
+		CEDC475A179DDCBA00746119 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC4759179DDCBA00746119 /* Default.png */; };
+		CEDC475C179DDCBA00746119 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC475B179DDCBA00746119 /* Default@2x.png */; };
+		CEDC475E179DDCBA00746119 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC475D179DDCBA00746119 /* Default-568h@2x.png */; };
+		CEDC476E179DDCE900746119 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDC476D179DDCE900746119 /* MainStoryboard.storyboard */; };
+		CEDC4785179DDD2C00746119 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4773179DDD2C00746119 /* AFHTTPClient.m */; };
+		CEDC4786179DDD2C00746119 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4775179DDD2C00746119 /* AFHTTPRequestOperation.m */; };
+		CEDC4787179DDD2C00746119 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4777179DDD2C00746119 /* AFImageRequestOperation.m */; };
+		CEDC4788179DDD2C00746119 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4779179DDD2C00746119 /* AFJSONRequestOperation.m */; };
+		CEDC4789179DDD2C00746119 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC477B179DDD2C00746119 /* AFNetworkActivityIndicatorManager.m */; };
+		CEDC478A179DDD2C00746119 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC477E179DDD2C00746119 /* AFPropertyListRequestOperation.m */; };
+		CEDC478B179DDD2C00746119 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4780179DDD2C00746119 /* AFURLConnectionOperation.m */; };
+		CEDC478C179DDD2C00746119 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4782179DDD2C00746119 /* AFXMLRequestOperation.m */; };
+		CEDC478D179DDD2C00746119 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4784179DDD2C00746119 /* UIImageView+AFNetworking.m */; };
+		CEDC479C179DDD4800746119 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4790179DDD4800746119 /* AbstractActionSheetPicker.m */; };
+		CEDC479D179DDD4800746119 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4792179DDD4800746119 /* ActionSheetCustomPicker.m */; };
+		CEDC479E179DDD4800746119 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4795179DDD4800746119 /* ActionSheetDatePicker.m */; };
+		CEDC479F179DDD4800746119 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4797179DDD4800746119 /* ActionSheetDistancePicker.m */; };
+		CEDC47A0179DDD4800746119 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC4799179DDD4800746119 /* ActionSheetStringPicker.m */; };
+		CEDC47A1179DDD4800746119 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC479B179DDD4800746119 /* DistancePickerView.m */; };
+		CEDC47AA179DDD9100746119 /* CdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC47A4179DDD9000746119 /* CdDelegate.m */; };
+		CEDC47AB179DDD9100746119 /* CdTask+CdTaskExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDC47A6179DDD9100746119 /* CdTask+CdTaskExt.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE5A3198179EC5E2001DEFAF /* AboutDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDialog.h; sourceTree = "<group>"; };
+		CE5A3199179EC5E2001DEFAF /* AboutDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDialog.m; sourceTree = "<group>"; };
+		CE5A319E179EC659001DEFAF /* AboutPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutPanel.h; sourceTree = "<group>"; };
+		CE5A319F179EC659001DEFAF /* AboutPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPanel.m; sourceTree = "<group>"; };
+		CE5A31A1179ECBE1001DEFAF /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = about.png; path = Icons/about.png; sourceTree = "<group>"; };
+		CE5A31A2179ECBE1001DEFAF /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about@2x.png"; path = "Icons/about@2x.png"; sourceTree = "<group>"; };
+		CE794634179F94B3001373E2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE794636179F94F0001373E2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CE7FAE73179DDE4B00C5B33E /* ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCommunication.h; sourceTree = "<group>"; };
+		CE7FAE74179DDE4B00C5B33E /* ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunication.m; sourceTree = "<group>"; };
+		CE7FAE76179DDE6A00C5B33E /* AddTaskDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskDialog.h; sourceTree = "<group>"; };
+		CE7FAE77179DDE6A00C5B33E /* AddTaskDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskDialog.m; sourceTree = "<group>"; };
+		CE7FAE79179DDE7B00C5B33E /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		CE7FAE7D179DDEB300C5B33E /* UserAccountDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountDialog.h; sourceTree = "<group>"; };
+		CE7FAE7E179DDEB300C5B33E /* UserAccountDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountDialog.m; sourceTree = "<group>"; };
+		CE7FAE81179DDEE400C5B33E /* TaskSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskSelector.h; sourceTree = "<group>"; };
+		CE7FAE82179DDEE400C5B33E /* TaskSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskSelector.m; sourceTree = "<group>"; };
+		CE7FAE83179DDEE400C5B33E /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
+		CE7FAE84179DDEE400C5B33E /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
+		CE7FAE87179DDEFD00C5B33E /* TextFieldInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldInput.h; sourceTree = "<group>"; };
+		CE7FAE88179DDEFD00C5B33E /* TextFieldInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldInput.m; sourceTree = "<group>"; };
+		CE7FAE89179DDEFD00C5B33E /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
+		CE7FAE8A179DDEFD00C5B33E /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
+		CE7FAE8B179DDEFD00C5B33E /* UserAccountPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountPanel.h; sourceTree = "<group>"; };
+		CE7FAE8C179DDEFD00C5B33E /* UserAccountPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountPanel.m; sourceTree = "<group>"; };
+		CE7FAE90179DDF2200C5B33E /* TaskTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableCell.h; sourceTree = "<group>"; };
+		CE7FAE91179DDF2200C5B33E /* TaskTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableCell.m; sourceTree = "<group>"; };
+		CE7FAE93179DDF5000C5B33E /* SwitchCellNoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCellNoLayout.h; sourceTree = "<group>"; };
+		CE7FAE94179DDF5000C5B33E /* SwitchCellNoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCellNoLayout.m; sourceTree = "<group>"; };
+		CE7FAE96179DDF6800C5B33E /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		CE7FAE97179DDF6800C5B33E /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		CE7FAE99179DDF7600C5B33E /* IServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServerCommunication.h; sourceTree = "<group>"; };
+		CE7FAE9A179DDF9300C5B33E /* ChooseCategoryDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCategoryDialog.h; sourceTree = "<group>"; };
+		CE7FAE9B179DDF9300C5B33E /* ChooseCategoryDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCategoryDialog.m; sourceTree = "<group>"; };
+		CE7FAE9C179DDF9300C5B33E /* ChooseDateDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseDateDialog.h; sourceTree = "<group>"; };
+		CE7FAE9D179DDF9300C5B33E /* ChooseDateDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseDateDialog.m; sourceTree = "<group>"; };
+		CE7FAE9E179DDF9300C5B33E /* ChoosePriorityDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePriorityDialog.h; sourceTree = "<group>"; };
+		CE7FAE9F179DDF9300C5B33E /* ChoosePriorityDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePriorityDialog.m; sourceTree = "<group>"; };
+		CE7FAEA4179DDFAC00C5B33E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE7FAEAF179DE0E500C5B33E /* CdCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdCategory.h; sourceTree = "<group>"; };
+		CE7FAEB0179DE0E500C5B33E /* CdCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdCategory.m; sourceTree = "<group>"; };
+		CE7FAEB2179DE0E600C5B33E /* CdTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdTask.h; sourceTree = "<group>"; };
+		CE7FAEB3179DE0E600C5B33E /* CdTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdTask.m; sourceTree = "<group>"; };
+		CE7FAEB5179DE0E600C5B33E /* CdDeletedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdDeletedTask.h; sourceTree = "<group>"; };
+		CE7FAEB6179DE0E600C5B33E /* CdDeletedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdDeletedTask.m; sourceTree = "<group>"; };
+		CE7FAEB8179DE21F00C5B33E /* Md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Md5.h; sourceTree = "<group>"; };
+		CE7FAEB9179DE21F00C5B33E /* Md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Md5.m; sourceTree = "<group>"; };
+		CE7FAEBB179DE24000C5B33E /* UserPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPrefs.h; sourceTree = "<group>"; };
+		CE7FAEBC179DE24000C5B33E /* UserPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPrefs.m; sourceTree = "<group>"; };
+		CE7FAEBD179DE24000C5B33E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		CE7FAEC2179DE31600C5B33E /* LabelDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelDialog.h; path = TaskGnome/LabelDialog.h; sourceTree = "<group>"; };
+		CE7FAEC3179DE31600C5B33E /* LabelDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelDialog.m; path = TaskGnome/LabelDialog.m; sourceTree = "<group>"; };
+		CE7FAEC5179DE34500C5B33E /* TasksNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksNavigationViewController.h; sourceTree = "<group>"; };
+		CE7FAEC6179DE34500C5B33E /* TasksNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksNavigationViewController.m; sourceTree = "<group>"; };
+		CE7FAEC8179DE37F00C5B33E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE7FAECA179DE38A00C5B33E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CE7FAEEE179DE4A900C5B33E /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Done.png; path = Icons/Done.png; sourceTree = "<group>"; };
+		CE7FAEEF179DE4A900C5B33E /* Done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Done@2x.png"; path = "Icons/Done@2x.png"; sourceTree = "<group>"; };
+		CE7FAEF0179DE4A900C5B33E /* Preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Preferences.png; path = Icons/Preferences.png; sourceTree = "<group>"; };
+		CE7FAEF1179DE4A900C5B33E /* Preferences@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Preferences@2x.png"; path = "Icons/Preferences@2x.png"; sourceTree = "<group>"; };
+		CE7FAEF2179DE4A900C5B33E /* TaskGnomAddIcon2_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomAddIcon2_48.png; path = Icons/TaskGnomAddIcon2_48.png; sourceTree = "<group>"; };
+		CE7FAEF3179DE4A900C5B33E /* TaskGnomAddIcon30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomAddIcon30.png; path = Icons/TaskGnomAddIcon30.png; sourceTree = "<group>"; };
+		CE7FAEF4179DE4A900C5B33E /* TaskGnomAddIcon64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomAddIcon64.png; path = Icons/TaskGnomAddIcon64.png; sourceTree = "<group>"; };
+		CE7FAEF5179DE4A900C5B33E /* TaskGnomeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo.png; path = Icons/TaskGnomeLogo.png; sourceTree = "<group>"; };
+		CE7FAEF6179DE4A900C5B33E /* TaskGnomeLogo114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo114.png; path = Icons/TaskGnomeLogo114.png; sourceTree = "<group>"; };
+		CE7FAEF7179DE4A900C5B33E /* TaskGnomeLogo144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo144.png; path = Icons/TaskGnomeLogo144.png; sourceTree = "<group>"; };
+		CE7FAEF8179DE4A900C5B33E /* TaskGnomeLogo256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo256.png; path = Icons/TaskGnomeLogo256.png; sourceTree = "<group>"; };
+		CE7FAEF9179DE4A900C5B33E /* TaskGnomeLogo512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo512.png; path = Icons/TaskGnomeLogo512.png; sourceTree = "<group>"; };
+		CE7FAEFA179DE4A900C5B33E /* TaskGnomeLogo57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo57.png; path = Icons/TaskGnomeLogo57.png; sourceTree = "<group>"; };
+		CE7FAEFB179DE4A900C5B33E /* TaskGnomeLogo72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaskGnomeLogo72.png; path = Icons/TaskGnomeLogo72.png; sourceTree = "<group>"; };
+		CE7FAEFC179DE4A900C5B33E /* Tasks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tasks.png; path = Icons/Tasks.png; sourceTree = "<group>"; };
+		CE7FAEFD179DE4A900C5B33E /* Tasks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tasks@2x.png"; path = "Icons/Tasks@2x.png"; sourceTree = "<group>"; };
+		CE7FAF0E179DE4F700C5B33E /* TaskGnomeLogo57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TaskGnomeLogo57.png; sourceTree = SOURCE_ROOT; };
+		CE7FAF10179DE52000C5B33E /* TaskGnomeLogo114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TaskGnomeLogo114.png; sourceTree = "<group>"; };
+		CE7FAF12179DE53400C5B33E /* TaskGnomeLogo72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TaskGnomeLogo72.png; sourceTree = "<group>"; };
+		CE7FAF14179DE53B00C5B33E /* TaskGnomeLogo144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TaskGnomeLogo144.png; sourceTree = "<group>"; };
+		CEDC4744179DDCB900746119 /* TaskGnome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskGnome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDC4747179DDCB900746119 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CEDC4749179DDCB900746119 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CEDC474B179DDCB900746119 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CEDC474F179DDCBA00746119 /* TaskGnome-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TaskGnome-Info.plist"; sourceTree = "<group>"; };
+		CEDC4751179DDCBA00746119 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEDC4753179DDCBA00746119 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEDC4755179DDCBA00746119 /* TaskGnome-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskGnome-Prefix.pch"; sourceTree = "<group>"; };
+		CEDC4756179DDCBA00746119 /* TaskGnomeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskGnomeAppDelegate.h; sourceTree = "<group>"; };
+		CEDC4757179DDCBA00746119 /* TaskGnomeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskGnomeAppDelegate.m; sourceTree = "<group>"; };
+		CEDC4759179DDCBA00746119 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CEDC475B179DDCBA00746119 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CEDC475D179DDCBA00746119 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CEDC476D179DDCE900746119 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CEDC4772179DDD2C00746119 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		CEDC4773179DDD2C00746119 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		CEDC4774179DDD2C00746119 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		CEDC4775179DDD2C00746119 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		CEDC4776179DDD2C00746119 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		CEDC4777179DDD2C00746119 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		CEDC4778179DDD2C00746119 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		CEDC4779179DDD2C00746119 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		CEDC477A179DDD2C00746119 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		CEDC477B179DDD2C00746119 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		CEDC477C179DDD2C00746119 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		CEDC477D179DDD2C00746119 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		CEDC477E179DDD2C00746119 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		CEDC477F179DDD2C00746119 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		CEDC4780179DDD2C00746119 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		CEDC4781179DDD2C00746119 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		CEDC4782179DDD2C00746119 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		CEDC4783179DDD2C00746119 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		CEDC4784179DDD2C00746119 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		CEDC478F179DDD4800746119 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		CEDC4790179DDD4800746119 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		CEDC4791179DDD4800746119 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		CEDC4792179DDD4800746119 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		CEDC4793179DDD4800746119 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		CEDC4794179DDD4800746119 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		CEDC4795179DDD4800746119 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		CEDC4796179DDD4800746119 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		CEDC4797179DDD4800746119 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		CEDC4798179DDD4800746119 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		CEDC4799179DDD4800746119 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		CEDC479A179DDD4800746119 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		CEDC479B179DDD4800746119 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		CEDC47A3179DDD9000746119 /* CdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdDelegate.h; sourceTree = "<group>"; };
+		CEDC47A4179DDD9000746119 /* CdDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdDelegate.m; sourceTree = "<group>"; };
+		CEDC47A5179DDD9000746119 /* CdTask+CdTaskExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CdTask+CdTaskExt.h"; sourceTree = "<group>"; };
+		CEDC47A6179DDD9100746119 /* CdTask+CdTaskExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CdTask+CdTaskExt.m"; sourceTree = "<group>"; };
+		CEDC47A7179DDD9100746119 /* CdTaskMeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdTaskMeta.h; sourceTree = "<group>"; };
+		CEDC47A8179DDD9100746119 /* ICdCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICdCategory.h; sourceTree = "<group>"; };
+		CEDC47A9179DDD9100746119 /* ICdTaskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICdTaskInfo.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDC4741179DDCB900746119 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE794637179F94F0001373E2 /* MobileCoreServices.framework in Frameworks */,
+				CE794635179F94B3001373E2 /* SystemConfiguration.framework in Frameworks */,
+				CE7FAECB179DE38A00C5B33E /* Security.framework in Frameworks */,
+				CE7FAEC9179DE37F00C5B33E /* CoreData.framework in Frameworks */,
+				CEDC4748179DDCB900746119 /* UIKit.framework in Frameworks */,
+				CEDC474A179DDCB900746119 /* Foundation.framework in Frameworks */,
+				CEDC474C179DDCB900746119 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE7FAE72179DDE2C00C5B33E /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAE99179DDF7600C5B33E /* IServerCommunication.h */,
+				CE7FAE73179DDE4B00C5B33E /* ServerCommunication.h */,
+				CE7FAE74179DDE4B00C5B33E /* ServerCommunication.m */,
+			);
+			name = Synchronization;
+			sourceTree = "<group>";
+		};
+		CE7FAE7A179DDE8600C5B33E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAEC2179DE31600C5B33E /* LabelDialog.h */,
+				CE7FAEC3179DE31600C5B33E /* LabelDialog.m */,
+				CE7FAE96179DDF6800C5B33E /* SwitchCell.h */,
+				CE7FAE97179DDF6800C5B33E /* SwitchCell.m */,
+				CE7FAE93179DDF5000C5B33E /* SwitchCellNoLayout.h */,
+				CE7FAE94179DDF5000C5B33E /* SwitchCellNoLayout.m */,
+				CE7FAE90179DDF2200C5B33E /* TaskTableCell.h */,
+				CE7FAE91179DDF2200C5B33E /* TaskTableCell.m */,
+				CE7FAE87179DDEFD00C5B33E /* TextFieldInput.h */,
+				CE7FAE88179DDEFD00C5B33E /* TextFieldInput.m */,
+				CE7FAE89179DDEFD00C5B33E /* TextViewCell.h */,
+				CE7FAE8A179DDEFD00C5B33E /* TextViewCell.m */,
+				CE7FAE8B179DDEFD00C5B33E /* UserAccountPanel.h */,
+				CE7FAE8C179DDEFD00C5B33E /* UserAccountPanel.m */,
+				CE5A319E179EC659001DEFAF /* AboutPanel.h */,
+				CE5A319F179EC659001DEFAF /* AboutPanel.m */,
+			);
+			name = Widgets;
+			sourceTree = "<group>";
+		};
+		CE7FAE7B179DDE8E00C5B33E /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAE9A179DDF9300C5B33E /* ChooseCategoryDialog.h */,
+				CE7FAE9B179DDF9300C5B33E /* ChooseCategoryDialog.m */,
+				CE7FAE9C179DDF9300C5B33E /* ChooseDateDialog.h */,
+				CE7FAE9D179DDF9300C5B33E /* ChooseDateDialog.m */,
+				CE7FAE9E179DDF9300C5B33E /* ChoosePriorityDialog.h */,
+				CE7FAE9F179DDF9300C5B33E /* ChoosePriorityDialog.m */,
+				CE7FAE7D179DDEB300C5B33E /* UserAccountDialog.h */,
+				CE7FAE7E179DDEB300C5B33E /* UserAccountDialog.m */,
+				CE7FAE76179DDE6A00C5B33E /* AddTaskDialog.h */,
+				CE7FAE77179DDE6A00C5B33E /* AddTaskDialog.m */,
+				CE5A3198179EC5E2001DEFAF /* AboutDialog.h */,
+				CE5A3199179EC5E2001DEFAF /* AboutDialog.m */,
+			);
+			name = Dialogs;
+			sourceTree = "<group>";
+		};
+		CE7FAE7C179DDE9300C5B33E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAEC5179DE34500C5B33E /* TasksNavigationViewController.h */,
+				CE7FAEC6179DE34500C5B33E /* TasksNavigationViewController.m */,
+				CE7FAE81179DDEE400C5B33E /* TaskSelector.h */,
+				CE7FAE82179DDEE400C5B33E /* TaskSelector.m */,
+				CE7FAE83179DDEE400C5B33E /* TasksViewController.h */,
+				CE7FAE84179DDEE400C5B33E /* TasksViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CE7FAE80179DDEBB00C5B33E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAEBB179DE24000C5B33E /* UserPrefs.h */,
+				CE7FAEBC179DE24000C5B33E /* UserPrefs.m */,
+				CE7FAEBD179DE24000C5B33E /* Util.h */,
+				CE7FAEB8179DE21F00C5B33E /* Md5.h */,
+				CE7FAEB9179DE21F00C5B33E /* Md5.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		CE7FAECC179DE3E700C5B33E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAEF2179DE4A900C5B33E /* TaskGnomAddIcon2_48.png */,
+				CE7FAEF3179DE4A900C5B33E /* TaskGnomAddIcon30.png */,
+				CE7FAEF4179DE4A900C5B33E /* TaskGnomAddIcon64.png */,
+				CE7FAEF5179DE4A900C5B33E /* TaskGnomeLogo.png */,
+				CE7FAEF6179DE4A900C5B33E /* TaskGnomeLogo114.png */,
+				CE7FAEF7179DE4A900C5B33E /* TaskGnomeLogo144.png */,
+				CE7FAEF8179DE4A900C5B33E /* TaskGnomeLogo256.png */,
+				CE7FAEF9179DE4A900C5B33E /* TaskGnomeLogo512.png */,
+				CE7FAEFA179DE4A900C5B33E /* TaskGnomeLogo57.png */,
+				CE7FAEFB179DE4A900C5B33E /* TaskGnomeLogo72.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		CEDC473B179DDCB900746119 = {
+			isa = PBXGroup;
+			children = (
+				CE7FAF14179DE53B00C5B33E /* TaskGnomeLogo144.png */,
+				CE7FAF12179DE53400C5B33E /* TaskGnomeLogo72.png */,
+				CE7FAF0E179DE4F700C5B33E /* TaskGnomeLogo57.png */,
+				CE7FAF10179DE52000C5B33E /* TaskGnomeLogo114.png */,
+				CEDC474D179DDCBA00746119 /* TaskGnome */,
+				CEDC4746179DDCB900746119 /* Frameworks */,
+				CEDC4745179DDCB900746119 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDC4745179DDCB900746119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC4744179DDCB900746119 /* TaskGnome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDC4746179DDCB900746119 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE794636179F94F0001373E2 /* MobileCoreServices.framework */,
+				CE794634179F94B3001373E2 /* SystemConfiguration.framework */,
+				CE7FAECA179DE38A00C5B33E /* Security.framework */,
+				CE7FAEC8179DE37F00C5B33E /* CoreData.framework */,
+				CEDC4747179DDCB900746119 /* UIKit.framework */,
+				CEDC4749179DDCB900746119 /* Foundation.framework */,
+				CEDC474B179DDCB900746119 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEDC474D179DDCBA00746119 /* TaskGnome */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAE80179DDEBB00C5B33E /* Utilities */,
+				CE7FAE72179DDE2C00C5B33E /* Synchronization */,
+				CEDC47A2179DDD5C00746119 /* Data */,
+				CEDC4770179DDD1500746119 /* Libraries */,
+				CEDC476F179DDCF400746119 /* UI */,
+				CEDC4756179DDCBA00746119 /* TaskGnomeAppDelegate.h */,
+				CEDC4757179DDCBA00746119 /* TaskGnomeAppDelegate.m */,
+				CEDC474E179DDCBA00746119 /* Supporting Files */,
+			);
+			path = TaskGnome;
+			sourceTree = "<group>";
+		};
+		CEDC474E179DDCBA00746119 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAEEE179DE4A900C5B33E /* Done.png */,
+				CE5A31A1179ECBE1001DEFAF /* about.png */,
+				CE5A31A2179ECBE1001DEFAF /* about@2x.png */,
+				CE7FAEEF179DE4A900C5B33E /* Done@2x.png */,
+				CE7FAEF0179DE4A900C5B33E /* Preferences.png */,
+				CE7FAEF1179DE4A900C5B33E /* Preferences@2x.png */,
+				CE7FAEFC179DE4A900C5B33E /* Tasks.png */,
+				CE7FAEFD179DE4A900C5B33E /* Tasks@2x.png */,
+				CE7FAECC179DE3E700C5B33E /* Images */,
+				CEDC474F179DDCBA00746119 /* TaskGnome-Info.plist */,
+				CEDC4750179DDCBA00746119 /* InfoPlist.strings */,
+				CEDC4753179DDCBA00746119 /* main.m */,
+				CEDC4755179DDCBA00746119 /* TaskGnome-Prefix.pch */,
+				CEDC4759179DDCBA00746119 /* Default.png */,
+				CEDC475B179DDCBA00746119 /* Default@2x.png */,
+				CEDC475D179DDCBA00746119 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEDC476F179DDCF400746119 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAE7C179DDE9300C5B33E /* Views */,
+				CE7FAE7B179DDE8E00C5B33E /* Dialogs */,
+				CE7FAE7A179DDE8600C5B33E /* Widgets */,
+				CEDC476D179DDCE900746119 /* MainStoryboard.storyboard */,
+			);
+			name = UI;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CEDC4770179DDD1500746119 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC478E179DDD4800746119 /* Pickers */,
+				CEDC4771179DDD2C00746119 /* AFNetworking */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		CEDC4771179DDD2C00746119 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC4772179DDD2C00746119 /* AFHTTPClient.h */,
+				CEDC4773179DDD2C00746119 /* AFHTTPClient.m */,
+				CEDC4774179DDD2C00746119 /* AFHTTPRequestOperation.h */,
+				CEDC4775179DDD2C00746119 /* AFHTTPRequestOperation.m */,
+				CEDC4776179DDD2C00746119 /* AFImageRequestOperation.h */,
+				CEDC4777179DDD2C00746119 /* AFImageRequestOperation.m */,
+				CEDC4778179DDD2C00746119 /* AFJSONRequestOperation.h */,
+				CEDC4779179DDD2C00746119 /* AFJSONRequestOperation.m */,
+				CEDC477A179DDD2C00746119 /* AFNetworkActivityIndicatorManager.h */,
+				CEDC477B179DDD2C00746119 /* AFNetworkActivityIndicatorManager.m */,
+				CEDC477C179DDD2C00746119 /* AFNetworking.h */,
+				CEDC477D179DDD2C00746119 /* AFPropertyListRequestOperation.h */,
+				CEDC477E179DDD2C00746119 /* AFPropertyListRequestOperation.m */,
+				CEDC477F179DDD2C00746119 /* AFURLConnectionOperation.h */,
+				CEDC4780179DDD2C00746119 /* AFURLConnectionOperation.m */,
+				CEDC4781179DDD2C00746119 /* AFXMLRequestOperation.h */,
+				CEDC4782179DDD2C00746119 /* AFXMLRequestOperation.m */,
+				CEDC4783179DDD2C00746119 /* UIImageView+AFNetworking.h */,
+				CEDC4784179DDD2C00746119 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		CEDC478E179DDD4800746119 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FAE79179DDE7B00C5B33E /* ActionSheetPicker.h */,
+				CEDC478F179DDD4800746119 /* AbstractActionSheetPicker.h */,
+				CEDC4790179DDD4800746119 /* AbstractActionSheetPicker.m */,
+				CEDC4791179DDD4800746119 /* ActionSheetCustomPicker.h */,
+				CEDC4792179DDD4800746119 /* ActionSheetCustomPicker.m */,
+				CEDC4793179DDD4800746119 /* ActionSheetCustomPickerDelegate.h */,
+				CEDC4794179DDD4800746119 /* ActionSheetDatePicker.h */,
+				CEDC4795179DDD4800746119 /* ActionSheetDatePicker.m */,
+				CEDC4796179DDD4800746119 /* ActionSheetDistancePicker.h */,
+				CEDC4797179DDD4800746119 /* ActionSheetDistancePicker.m */,
+				CEDC4798179DDD4800746119 /* ActionSheetStringPicker.h */,
+				CEDC4799179DDD4800746119 /* ActionSheetStringPicker.m */,
+				CEDC479A179DDD4800746119 /* DistancePickerView.h */,
+				CEDC479B179DDD4800746119 /* DistancePickerView.m */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		CEDC47A2179DDD5C00746119 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEDC47A3179DDD9000746119 /* CdDelegate.h */,
+				CEDC47A4179DDD9000746119 /* CdDelegate.m */,
+				CEDC47A5179DDD9000746119 /* CdTask+CdTaskExt.h */,
+				CEDC47A6179DDD9100746119 /* CdTask+CdTaskExt.m */,
+				CEDC47A7179DDD9100746119 /* CdTaskMeta.h */,
+				CEDC47A8179DDD9100746119 /* ICdCategory.h */,
+				CEDC47A9179DDD9100746119 /* ICdTaskInfo.h */,
+				CE7FAEA3179DDFAC00C5B33E /* Model.xcdatamodeld */,
+				CE7FAEAF179DE0E500C5B33E /* CdCategory.h */,
+				CE7FAEB0179DE0E500C5B33E /* CdCategory.m */,
+				CE7FAEB2179DE0E600C5B33E /* CdTask.h */,
+				CE7FAEB3179DE0E600C5B33E /* CdTask.m */,
+				CE7FAEB5179DE0E600C5B33E /* CdDeletedTask.h */,
+				CE7FAEB6179DE0E600C5B33E /* CdDeletedTask.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDC4743179DDCB900746119 /* TaskGnome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDC476A179DDCBA00746119 /* Build configuration list for PBXNativeTarget "TaskGnome" */;
+			buildPhases = (
+				CEDC4740179DDCB900746119 /* Sources */,
+				CEDC4741179DDCB900746119 /* Frameworks */,
+				CEDC4742179DDCB900746119 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaskGnome;
+			productName = TaskGnome;
+			productReference = CEDC4744179DDCB900746119 /* TaskGnome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDC473C179DDCB900746119 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TaskGnome;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Covalent;
+			};
+			buildConfigurationList = CEDC473F179DDCB900746119 /* Build configuration list for PBXProject "TaskGnome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CEDC473B179DDCB900746119;
+			productRefGroup = CEDC4745179DDCB900746119 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDC4743179DDCB900746119 /* TaskGnome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDC4742179DDCB900746119 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDC4752179DDCBA00746119 /* InfoPlist.strings in Resources */,
+				CEDC475A179DDCBA00746119 /* Default.png in Resources */,
+				CEDC475C179DDCBA00746119 /* Default@2x.png in Resources */,
+				CEDC475E179DDCBA00746119 /* Default-568h@2x.png in Resources */,
+				CEDC476E179DDCE900746119 /* MainStoryboard.storyboard in Resources */,
+				CE7FAEFE179DE4A900C5B33E /* Done.png in Resources */,
+				CE7FAEFF179DE4A900C5B33E /* Done@2x.png in Resources */,
+				CE7FAF00179DE4A900C5B33E /* Preferences.png in Resources */,
+				CE7FAF01179DE4A900C5B33E /* Preferences@2x.png in Resources */,
+				CE7FAF02179DE4A900C5B33E /* TaskGnomAddIcon2_48.png in Resources */,
+				CE7FAF03179DE4A900C5B33E /* TaskGnomAddIcon30.png in Resources */,
+				CE7FAF04179DE4A900C5B33E /* TaskGnomAddIcon64.png in Resources */,
+				CE7FAF05179DE4A900C5B33E /* TaskGnomeLogo.png in Resources */,
+				CE7FAF06179DE4A900C5B33E /* TaskGnomeLogo114.png in Resources */,
+				CE7FAF07179DE4A900C5B33E /* TaskGnomeLogo144.png in Resources */,
+				CE7FAF08179DE4A900C5B33E /* TaskGnomeLogo256.png in Resources */,
+				CE7FAF09179DE4A900C5B33E /* TaskGnomeLogo512.png in Resources */,
+				CE7FAF0A179DE4A900C5B33E /* TaskGnomeLogo57.png in Resources */,
+				CE7FAF0B179DE4A900C5B33E /* TaskGnomeLogo72.png in Resources */,
+				CE7FAF0C179DE4A900C5B33E /* Tasks.png in Resources */,
+				CE7FAF0D179DE4A900C5B33E /* Tasks@2x.png in Resources */,
+				CE7FAF0F179DE4F700C5B33E /* TaskGnomeLogo57.png in Resources */,
+				CE7FAF11179DE52000C5B33E /* TaskGnomeLogo114.png in Resources */,
+				CE7FAF13179DE53400C5B33E /* TaskGnomeLogo72.png in Resources */,
+				CE7FAF15179DE53C00C5B33E /* TaskGnomeLogo144.png in Resources */,
+				CE5A31A3179ECBE1001DEFAF /* about.png in Resources */,
+				CE5A31A4179ECBE1001DEFAF /* about@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDC4740179DDCB900746119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDC4754179DDCBA00746119 /* main.m in Sources */,
+				CEDC4758179DDCBA00746119 /* TaskGnomeAppDelegate.m in Sources */,
+				CEDC4785179DDD2C00746119 /* AFHTTPClient.m in Sources */,
+				CEDC4786179DDD2C00746119 /* AFHTTPRequestOperation.m in Sources */,
+				CEDC4787179DDD2C00746119 /* AFImageRequestOperation.m in Sources */,
+				CEDC4788179DDD2C00746119 /* AFJSONRequestOperation.m in Sources */,
+				CEDC4789179DDD2C00746119 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				CEDC478A179DDD2C00746119 /* AFPropertyListRequestOperation.m in Sources */,
+				CEDC478B179DDD2C00746119 /* AFURLConnectionOperation.m in Sources */,
+				CEDC478C179DDD2C00746119 /* AFXMLRequestOperation.m in Sources */,
+				CEDC478D179DDD2C00746119 /* UIImageView+AFNetworking.m in Sources */,
+				CEDC479C179DDD4800746119 /* AbstractActionSheetPicker.m in Sources */,
+				CEDC479D179DDD4800746119 /* ActionSheetCustomPicker.m in Sources */,
+				CEDC479E179DDD4800746119 /* ActionSheetDatePicker.m in Sources */,
+				CEDC479F179DDD4800746119 /* ActionSheetDistancePicker.m in Sources */,
+				CEDC47A0179DDD4800746119 /* ActionSheetStringPicker.m in Sources */,
+				CEDC47A1179DDD4800746119 /* DistancePickerView.m in Sources */,
+				CEDC47AA179DDD9100746119 /* CdDelegate.m in Sources */,
+				CEDC47AB179DDD9100746119 /* CdTask+CdTaskExt.m in Sources */,
+				CE7FAE75179DDE4B00C5B33E /* ServerCommunication.m in Sources */,
+				CE7FAE78179DDE6A00C5B33E /* AddTaskDialog.m in Sources */,
+				CE7FAE7F179DDEB300C5B33E /* UserAccountDialog.m in Sources */,
+				CE7FAE85179DDEE400C5B33E /* TaskSelector.m in Sources */,
+				CE7FAE86179DDEE400C5B33E /* TasksViewController.m in Sources */,
+				CE7FAE8D179DDEFD00C5B33E /* TextFieldInput.m in Sources */,
+				CE7FAE8E179DDEFD00C5B33E /* TextViewCell.m in Sources */,
+				CE7FAE8F179DDEFD00C5B33E /* UserAccountPanel.m in Sources */,
+				CE7FAE92179DDF2200C5B33E /* TaskTableCell.m in Sources */,
+				CE7FAE95179DDF5000C5B33E /* SwitchCellNoLayout.m in Sources */,
+				CE7FAE98179DDF6800C5B33E /* SwitchCell.m in Sources */,
+				CE7FAEA0179DDF9300C5B33E /* ChooseCategoryDialog.m in Sources */,
+				CE7FAEA1179DDF9300C5B33E /* ChooseDateDialog.m in Sources */,
+				CE7FAEA2179DDF9300C5B33E /* ChoosePriorityDialog.m in Sources */,
+				CE7FAEA5179DDFAC00C5B33E /* Model.xcdatamodeld in Sources */,
+				CE7FAEB1179DE0E500C5B33E /* CdCategory.m in Sources */,
+				CE7FAEB4179DE0E600C5B33E /* CdTask.m in Sources */,
+				CE7FAEB7179DE0E600C5B33E /* CdDeletedTask.m in Sources */,
+				CE7FAEBA179DE21F00C5B33E /* Md5.m in Sources */,
+				CE7FAEBE179DE24000C5B33E /* UserPrefs.m in Sources */,
+				CE7FAEC4179DE31600C5B33E /* LabelDialog.m in Sources */,
+				CE7FAEC7179DE34500C5B33E /* TasksNavigationViewController.m in Sources */,
+				CE5A319A179EC5E2001DEFAF /* AboutDialog.m in Sources */,
+				CE5A31A0179EC65A001DEFAF /* AboutPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEDC4750179DDCBA00746119 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDC4751179DDCBA00746119 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDC4768179DDCBA00746119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hans Oesterholt (2H78569888)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "F7464D44-3C0B-49C4-A5F7-11084B2CFB3C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDC4769179DDCBA00746119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hans Oesterholt (2H78569888)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "F7464D44-3C0B-49C4-A5F7-11084B2CFB3C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDC476B179DDCBA00746119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaskGnome/TaskGnome-Prefix.pch";
+				INFOPLIST_FILE = "TaskGnome/TaskGnome-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEDC476C179DDCBA00746119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaskGnome/TaskGnome-Prefix.pch";
+				INFOPLIST_FILE = "TaskGnome/TaskGnome-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDC473F179DDCB900746119 /* Build configuration list for PBXProject "TaskGnome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDC4768179DDCBA00746119 /* Debug */,
+				CEDC4769179DDCBA00746119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDC476A179DDCBA00746119 /* Build configuration list for PBXNativeTarget "TaskGnome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDC476B179DDCBA00746119 /* Debug */,
+				CEDC476C179DDCBA00746119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE7FAEA3179DDFAC00C5B33E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE7FAEA4179DDFAC00C5B33E /* Model.xcdatamodel */,
+			);
+			currentVersion = CE7FAEA4179DDFAC00C5B33E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CEDC473C179DDCB900746119 /* Project object */;
+}

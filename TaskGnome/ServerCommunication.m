@@ -296,7 +296,7 @@ typedef void (^cbResultLineInterpreter)(NSString *message);
         if (ok) {
             //CdDelegate *dg = [[CdDelegate alloc] init];
             CdDelegate *dg = self.cd_delegate;
-
+	
             NSLog(@"fetchTaskFromServer: success");
             CdTask *task = [dg fetchTask:task_id];
             

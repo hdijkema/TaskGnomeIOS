@@ -24,6 +24,7 @@
 #import "TasksNavigationViewController.h"
 #import "ServerCommunication.h"
 #import "UserPrefs.h"
+#import "TaskGnomeAppDelegate.h"
 
 @interface TaskSelector ()
 
@@ -35,7 +36,7 @@
 #define VIEW_ACTIVE_TASKS 1
 #define VIEW_FINISHED_TASKS 2
 
-#define SYNC_INTERVAL 300
+#define SYNC_INTERVAL 20*60     // 20 minutes
 
 @end
 
@@ -61,21 +62,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    UIApplication *myApplication = [UIApplication sharedApplication];
+    TaskGnomeAppDelegate *appDelegate = (TaskGnomeAppDelegate *) myApplication.delegate;
+    [appDelegate setTaskSelector:self];
+    
     _bar.selectedItem = _active_tasks;
     self.currentView = VIEW_ACTIVE_TASKS;
+    self.syncing = false;
     [self startSyncTimer];
     [self triggerSync];
 }
 
 - (void) startSyncTimer
 {
-    self.syncing = TRUE;
-    NSTimer * syncer = [NSTimer scheduledTimerWithTimeInterval:SYNC_INTERVAL
+    if (!self.syncing) {
+        self.syncing = TRUE;
+        NSTimer * syncer = [NSTimer scheduledTimerWithTimeInterval:SYNC_INTERVAL
                                                         target:self
                                                       selector:@selector(startSync:)
                                                       userInfo:nil
                                                        repeats:TRUE
-                        ];
+                            ];
+    }
 }
 
 -(void) stopSyncTimer

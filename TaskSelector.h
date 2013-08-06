@@ -46,6 +46,10 @@
 - (void)triggerSync;
 - (void)checkConnection;
 
+- (void)syncTasks;
+- (void)startSyncTimer;
+- (void)stopSyncTimer;
+
 @end
 
 #endif

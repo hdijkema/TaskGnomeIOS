@@ -33,6 +33,7 @@
 @property NSFetchedResultsController *tasksController;
 @property NSFetchedResultsController *tasksControllerFinished;
 @property NSFetchedResultsController *catController;
+@property int main;
 
 @end
 
@@ -45,6 +46,7 @@ static int counter = 0;
 @synthesize tasksController = _tasksController;
 @synthesize tasksControllerFinished = _tasksControllerFinished;
 @synthesize catController = _catController;
+@synthesize main = _main;
 
 NSError *myLastError;
 
@@ -98,6 +100,8 @@ NSError *myLastError;
         [self saveContext];
     }
     
+    _main = 0;
+    
     return self;
 }
 
@@ -109,6 +113,8 @@ NSError *myLastError;
                                              selector:@selector(contextDidSave:)
                                                  name:NSManagedObjectContextDidSaveNotification
                                                object:nil];
+    _main = 1;
+    
     return self;
     
 }
@@ -327,7 +333,7 @@ NSError *myLastError;
                                                   initWithFetchRequest:request
                                                   managedObjectContext:_managedObjectContext
                                                   sectionNameKeyPath:@"task_section"
-                                                  cacheName:nil];
+                                                  cacheName:(_main) ? cache_name : nil];
         
         _tasksController = controller;
         
@@ -464,7 +470,7 @@ NSError *myLastError;
                                                   initWithFetchRequest:request
                                                   managedObjectContext:_managedObjectContext
                                                   sectionNameKeyPath:nil
-                                                  cacheName:nil];
+                                                  cacheName:(_main) ? cache_name : nil];
         
         _catController = controller;
     } else {

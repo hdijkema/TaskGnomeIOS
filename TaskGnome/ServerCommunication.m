@@ -84,7 +84,7 @@ typedef void (^cbResultLineInterpreter)(NSString *message);
             for(i=0; i < [strings count]; ++i) {
                 [self get_key_value:[strings objectAtIndex:i] dict:kv];
             }
-            NSLog(@"%@",line);
+            //NSLog(@"%@",line);
             
             NSString * task_id = [kv objectForKey:@"id"];
             NSString * md5 = [kv objectForKey:@"md5"];

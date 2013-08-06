@@ -78,6 +78,12 @@ int editSection;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    refreshControl.tintColor = [UIColor magentaColor];
+    [refreshControl addTarget:self action:@selector(triggerRefresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
 
     UIApplication *myApplication = [UIApplication sharedApplication];
     TaskGnomeAppDelegate *appDelegate = (TaskGnomeAppDelegate *) myApplication.delegate;
@@ -144,6 +150,12 @@ int editSection;
 - (void) triggerSync
 {
     [_taskSelector triggerSync];
+}
+
+- (void) triggerRefresh
+{
+    [self triggerSync];
+    [self.refreshControl endRefreshing];    
 }
 
 - (void)addTask:(NSObject<ICdTaskInfo> *)info
@@ -395,7 +407,8 @@ int editSection;
     } else {
         [tcell makeStandardBackground];
     }
-
+    
+    //NSLog(@"task = %@", [task name]);
     [tcell setTaskName:[task name]];
     CdCategory *cat = [task cat_relation];
     if (cat == nil) {

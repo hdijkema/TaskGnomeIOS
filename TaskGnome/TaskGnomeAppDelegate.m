@@ -103,7 +103,7 @@
 - (CdDelegate *) cd_delegate
 {
     if (_cd_delegate == nil) {
-        _cd_delegate = [[CdDelegate alloc] init];
+        _cd_delegate = [[CdDelegate alloc] initMain];
     }
     return _cd_delegate;
 }

@@ -294,6 +294,7 @@ typedef void (^cbResultLineInterpreter)(NSString *message);
         }];
         
         if (ok) {
+            NSLog(@"task name: %@", [taskData objectForKey:@"name"]);
             //CdDelegate *dg = [[CdDelegate alloc] init];
             CdDelegate *dg = self.cd_delegate;
 	

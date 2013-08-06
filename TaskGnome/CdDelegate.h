@@ -62,6 +62,7 @@
 - (Boolean) inError;
 - (NSError *) theError;
 
+- (CdDelegate *) initMain;
 
 @end
 

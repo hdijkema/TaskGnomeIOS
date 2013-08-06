@@ -27,9 +27,24 @@
 #import "TaskGnomeAppDelegate.h"
 #import "CdTask+CdTaskExt.h"
 
+@interface CdDelegate()
+
+@property int myCount;
+@property NSFetchedResultsController *tasksController;
+@property NSFetchedResultsController *tasksControllerFinished;
+@property NSFetchedResultsController *catController;
+
+@end
+
 @implementation CdDelegate
 
+static int counter = 0;
+
 @synthesize managedObjectContext=_managedObjectContext;
+@synthesize myCount = _myCount;
+@synthesize tasksController = _tasksController;
+@synthesize tasksControllerFinished = _tasksControllerFinished;
+@synthesize catController = _catController;
 
 NSError *myLastError;
 
@@ -58,8 +73,13 @@ NSError *myLastError;
 
 - (CdDelegate*)init
 {
+    self = [super init];
+    
     NSManagedObjectContext* context = [self managedObjectContext];
     myLastError = nil;
+    
+    counter += 1;
+    _myCount = counter;
     
     // If table of categories is empty, create it.
     int cat_count = [self countCategories];
@@ -81,7 +101,27 @@ NSError *myLastError;
     return self;
 }
 
+- (CdDelegate*)initMain
+{
+    self = [self init];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(contextDidSave:)
+                                                 name:NSManagedObjectContextDidSaveNotification
+                                               object:nil];
+    return self;
+    
+}
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)contextDidSave:(NSNotification *)notification
+{
+    SEL selector = @selector(mergeChangesFromContextDidSaveNotification:);
+    [_managedObjectContext performSelectorOnMainThread:selector withObject:notification waitUntilDone:YES];
+}
 
 - (void)setMd5Task:(CdTask *)task
 {
@@ -257,35 +297,86 @@ NSError *myLastError;
 
 - (NSFetchedResultsController *) tasks:(CdTaskKind)kind
 {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSFetchedResultsController *controller;
     
-    BOOL asc = (kind == Active) ? YES : NO;
-    
-    NSSortDescriptor *sortDescriptorDue = [[NSSortDescriptor alloc] initWithKey:@"due" ascending:asc];
-    NSSortDescriptor *sortDescriptorPrio = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:YES];
-    NSSortDescriptor *sortDescriptorName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    //NSSortDescriptor *sortDescriptorSection = [[NSSortDescriptor alloc] initWithKey:@"task_section" ascending:YES];
-    //NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptorSection,sortDescriptorDue, nil];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptorDue, sortDescriptorPrio, sortDescriptorName, nil];
-    [request setSortDescriptors:sortDescriptors];
-    
-    NSNumber * k = [[NSNumber alloc] initWithInt:kind];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(kind = %@)",k];
-    [request setPredicate:predicate];
+    if (_tasksController == nil) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
         
-    NSEntityDescription *entityDescription = [NSEntityDescription
-                                              entityForName:@"CdTask" inManagedObjectContext:_managedObjectContext];
-    [request setEntity:entityDescription];
+        BOOL asc = YES; //(kind == Active) ? YES : NO;
+        
+        NSSortDescriptor *sortDescriptorDue = [[NSSortDescriptor alloc] initWithKey:@"due" ascending:asc];
+        NSSortDescriptor *sortDescriptorPrio = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:YES];
+        NSSortDescriptor *sortDescriptorName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        //NSSortDescriptor *sortDescriptorSection = [[NSSortDescriptor alloc] initWithKey:@"task_section" ascending:YES];
+        //NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptorSection,sortDescriptorDue, nil];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptorDue, sortDescriptorPrio, sortDescriptorName, nil];
+        [request setSortDescriptors:sortDescriptors];
+        
+        CdTaskKind mykind = Active;
+        NSNumber * k = [[NSNumber alloc] initWithInt:mykind];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(kind = %@)",k];
+        [request setPredicate:predicate];
+        
+        NSEntityDescription *entityDescription = [NSEntityDescription
+                                                  entityForName:@"CdTask" inManagedObjectContext:_managedObjectContext];
+        [request setEntity:entityDescription];
+        
+        NSString *cache_name = [[NSString alloc] initWithFormat:@"tasks_cache_%d", _myCount];
+    	
+        NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
+                                                  initWithFetchRequest:request
+                                                  managedObjectContext:_managedObjectContext
+                                                  sectionNameKeyPath:@"task_section"
+                                                  cacheName:nil];
+        
+        _tasksController = controller;
+        
+        {
+            NSFetchRequest *request = [[NSFetchRequest alloc] init];
+            
+            BOOL asc = NO; //(kind == Active) ? YES : NO;
+            
+            NSSortDescriptor *sortDescriptorDue = [[NSSortDescriptor alloc] initWithKey:@"due" ascending:asc];
+            NSSortDescriptor *sortDescriptorPrio = [[NSSortDescriptor alloc] initWithKey:@"priority" ascending:YES];
+            NSSortDescriptor *sortDescriptorName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+            //NSSortDescriptor *sortDescriptorSection = [[NSSortDescriptor alloc] initWithKey:@"task_section" ascending:YES];
+            //NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptorSection,sortDescriptorDue, nil];
+            NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptorDue, sortDescriptorPrio, sortDescriptorName, nil];
+            [request setSortDescriptors:sortDescriptors];
+            
+            CdTaskKind mykind = Finished;
+            NSNumber * k = [[NSNumber alloc] initWithInt:mykind];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(kind = %@)",k];
+            [request setPredicate:predicate];
+            
+            NSEntityDescription *entityDescription = [NSEntityDescription
+                                                      entityForName:@"CdTask" inManagedObjectContext:_managedObjectContext];
+            [request setEntity:entityDescription];
+            
+            NSString *cache_name = [[NSString alloc] initWithFormat:@"tasks_cache_%d", _myCount];
+            
+            NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
+                                                      initWithFetchRequest:request
+                                                      managedObjectContext:_managedObjectContext
+                                                      sectionNameKeyPath:@"task_section"
+                                                      cacheName:nil];
+            
+            _tasksControllerFinished = controller;
+        }
+        
+    } 
+
+    if (kind == Active) {
+        controller = _tasksController;
+    } else {
+        controller = _tasksControllerFinished;
+    }
     
-    NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
-                                              initWithFetchRequest:request
-                                              managedObjectContext:_managedObjectContext
-                                              sectionNameKeyPath:@"task_section"
-                                              cacheName:@"tasks_cache"];
-    
+    [NSFetchedResultsController deleteCacheWithName:nil];
     NSError *error = nil;
     BOOL success = [controller performFetch:&error];
     [self setIfError:error];
+    NSLog(@"tasks: succes %d, error %@", success, error);
     
     return controller;
 }
@@ -353,22 +444,32 @@ NSError *myLastError;
 
 - (NSFetchedResultsController *) categories
 {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    [request setSortDescriptors:sortDescriptors];
-    //[sortDescriptors release];  This should not be necessary anymore because of ARC feature
-    //[sortDescriptor release];
+    NSFetchedResultsController * controller;
     
-    NSEntityDescription *entityDescription = [NSEntityDescription
-                                              entityForName:@"CdCategory" inManagedObjectContext:_managedObjectContext];
-    [request setEntity:entityDescription];
-    
-    NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
-                    initWithFetchRequest:request
-                    managedObjectContext:_managedObjectContext
-                    sectionNameKeyPath:nil
-                    cacheName:@"category_cache"];
+    if (_catController == nil) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+        [request setSortDescriptors:sortDescriptors];
+        //[sortDescriptors release];  This should not be necessary anymore because of ARC feature
+        //[sortDescriptor release];
+        
+        NSEntityDescription *entityDescription = [NSEntityDescription
+                                                  entityForName:@"CdCategory" inManagedObjectContext:_managedObjectContext];
+        [request setEntity:entityDescription];
+        
+        NSString *cache_name = [[NSString alloc] initWithFormat:@"category_cache_%d", _myCount];
+        
+        NSFetchedResultsController *controller = [[NSFetchedResultsController alloc]
+                                                  initWithFetchRequest:request
+                                                  managedObjectContext:_managedObjectContext
+                                                  sectionNameKeyPath:nil
+                                                  cacheName:nil];
+        
+        _catController = controller;
+    } else {
+        controller = _catController;
+    }
     
     NSError *error = nil;
     BOOL success = [controller performFetch:&error];

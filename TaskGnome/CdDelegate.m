@@ -90,8 +90,11 @@ NSError *myLastError;
     NSString * dt = [form stringFromDate:[task due]];
     CdCategory *cat = [task cat_relation];
     NSString * cat_id = [cat cat_id];
+    if (cat_id == nil) { cat_id = @""; }
     NSString * s = [NSString stringWithFormat: @"%@%@%@%@%@%@",[task name],cat_id,dt,[task more_info],[task priority],[task kind]];
-    [task setMd5:[s Md5]];
+    NSString *md5 = [s Md5];
+    //NSLog(@"md5calc: '%@' : %@", s, md5);
+    [task setMd5:md5];
     [task setUpdated:@"T"];
 }	
 
@@ -232,6 +235,8 @@ NSError *myLastError;
                                inManagedObjectContext:_managedObjectContext];
     NSUUID * uuid = [[NSUUID alloc] init];
     [task setTask_id:[uuid UUIDString]];
+    CdCategory *cat = [self fetchCategory:@"-"];
+    [task setCat_relation:cat];
     return task;
 }
 

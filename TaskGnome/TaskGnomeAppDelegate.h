@@ -22,13 +22,17 @@
 
 #import <UIKit/UIKit.h>
 #import "CdDelegate.h"
+#import "TaskSelector.h"
 
 @interface TaskGnomeAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) CdDelegate* cd_delegate;
+@property (nonatomic) TaskSelector *taskSelector;
 
 - (NSManagedObjectModel *) managedObjectModel;
 - (NSPersistentStoreCoordinator *) persistentStoreCoordinator;
+
+- (void) setTaskSelector:(TaskSelector *)taskSelector;
  
 @end
